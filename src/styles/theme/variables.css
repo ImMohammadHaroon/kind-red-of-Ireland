@@ -1,0 +1,51 @@
+:root {
+    --text-black: #000000;
+    --text-white: #ffffff;
+    --text-price-old: #BCBCBC;
+    --text-grey: #878787;
+    --background-light: #FBF8F5;
+    --background-light-2: #FEFBF7;
+    --background-light-3: #F2EDE8;
+    --background-pink: #EFDEDA;
+    --background-green: #33301F;
+    --background-white: #ffffff;
+    --background-black: #000000;
+    --border-light: #F2EDE8;
+    --border-black: #000;
+    --body-font-size: 16px;
+    --large-body-font-size: 18px;
+    --h1-font-size: 44px;
+    --h2-font-size: 44px;
+    --h3-font-size: 44px;
+    --h4-font-size: 22px;
+    --h5-font-size: 22px;
+    --h6-font-size: 22px;
+    --quote-font-size: 32px;
+    --text-cta-font-size: 11px;
+    --very-small-text-font-size: 10px;
+    --small-text-font-size: 12px;
+    --medium-text-font-size: 14px;
+    --counter-text-font-size: 8px;
+    --xxl-text-font-size: 100px;
+    --xxxl-text-font-size: 250px
+}
+
+@media(max-width:991px) {
+    :root {
+        --h1-font-size: 32px;
+        --h2-font-size: 32px;
+        --h3-font-size: 32px;
+        --quote-font-size: 22px;
+        --xxl-text-font-size: 50px;
+        --xxxl-text-font-size: 92px
+    }
+}
+
+@media(max-width:991px) {
+    .product__mobile-carousel .product-media__main {
+        padding-bottom: 150% !important
+    }
+    .product__mobile-carousel .product-media {
+        margin: 0 !important
+    }
+}

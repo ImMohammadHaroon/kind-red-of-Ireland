@@ -1,0 +1,330 @@
+/*
+ * Page-level styles for the routes this rebuild adds, which had no counterpart
+ * in the saved theme: the inner-page shell, page headers, the product and
+ * article grids, and the cart, product, article and placeholder pages.
+ *
+ * Section-specific additions live beside their section instead, in
+ * src/sections/<section>/styles.css.
+ *
+ * Everything here reuses the theme's own custom properties and type classes so
+ * these pages sit alongside the homepage rather than beside it.
+ */
+
+.inner-page {
+  padding-top: 180px;
+  padding-bottom: 120px;
+  min-height: 60vh;
+}
+
+@media (max-width: 991px) {
+  .inner-page {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+}
+
+/* ------------------------------------------------------------- page header */
+
+.page-header {
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 24px;
+}
+
+.page-header__title {
+  margin: 0 0 12px;
+}
+
+.page-header__note {
+  margin: 0;
+  color: var(--text-grey);
+  max-width: 60ch;
+}
+
+.page-empty {
+  padding: 40px 0 80px;
+}
+
+.no-results {
+  padding: 32px 0;
+  color: var(--text-grey);
+}
+
+/* -------------------------------------------------------------- item grids */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 16px;
+}
+
+@media (max-width: 1298px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .product-grid,
+  .article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .product-grid,
+  .article-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* -------------------------------------------------------------- cart page */
+
+.cart-page {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.cart-page__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-page__item {
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cart-page__item-image {
+  flex: 0 0 120px;
+}
+
+.cart-page__item-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-page__item-details {
+  flex: 1 1 auto;
+}
+
+.cart-page__item-details h2 {
+  margin: 0 0 8px;
+}
+
+.cart-page__item-details .small-text {
+  color: var(--text-grey);
+}
+
+.cart-page__item-price {
+  flex: 0 0 auto;
+}
+
+.cart-page__summary {
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  background: var(--background-white);
+}
+
+.cart-page__summary .cart__subtotal {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cart-page__summary .cart__taxes-info {
+  color: var(--text-grey);
+  font-size: var(--small-text-font-size);
+  margin-bottom: 24px;
+}
+
+.cart-upsell-block {
+  margin-top: 96px;
+}
+
+.cart-upsell-block .cart-upsell__title {
+  margin-bottom: 24px;
+}
+
+.cart-upsell-block .cart-upsell__products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 991px) {
+  .cart-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .cart-upsell-block .cart-upsell__products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ----------------------------------------------------------- product page */
+
+.product-page {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.product-page__media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.product-page__media img {
+  width: 100%;
+  height: auto;
+}
+
+.product-page__details {
+  position: sticky;
+  top: 140px;
+}
+
+.product-page__title {
+  margin: 0 0 8px;
+}
+
+.product-page__price {
+  margin-bottom: 32px;
+  color: var(--text-grey);
+}
+
+.product-page__sizes-label {
+  margin-bottom: 12px;
+}
+
+/*
+ * A dedicated size list rather than the theme's `.sizes__list`, which is sized
+ * for the two-column overlay on product cards (`li { width: 50% }`).
+ */
+.product-page__size-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-page__size-list a {
+  display: inline-block;
+  border: 1px solid var(--border-black);
+  padding: 12px 18px;
+  text-decoration: none;
+  color: var(--text-black);
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+}
+
+.product-page__size-list a:hover {
+  background: var(--background-black);
+  color: var(--text-white);
+}
+
+.product-page__size-list .sold-out a {
+  border-color: var(--border-light);
+  color: var(--text-price-old);
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+.product-page__actions {
+  margin: 32px 0 24px;
+}
+
+.product-page__wishlist {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-page__note {
+  color: var(--text-grey);
+  max-width: 42ch;
+}
+
+.product-page__related {
+  margin-top: 120px;
+}
+
+.product-page__related > h2 {
+  margin: 0 0 24px;
+}
+
+@media (max-width: 991px) {
+  .product-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .product-page__details {
+    position: static;
+  }
+
+  .product-page__media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------- article page */
+
+.article-page__media {
+  margin-bottom: 48px;
+}
+
+.article-page__media img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.article-page__header {
+  max-width: 70ch;
+  margin-bottom: 48px;
+}
+
+.article-page__title {
+  margin: 12px 0;
+}
+
+.article-page__body {
+  max-width: 70ch;
+}
+
+.article-page__body p {
+  margin: 0 0 16px;
+}
+
+/* -------------------------------------------------------------- stub page */
+
+.stub-page {
+  max-width: 60ch;
+  padding-bottom: 40px;
+}
+
+.stub-page__links {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
