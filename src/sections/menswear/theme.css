@@ -1,0 +1,144 @@
+.menswear {
+    position: relative
+}
+
+.menswear .hero__products {
+    bottom: auto;
+    top: 0
+}
+
+.menswear__media {
+    padding-bottom: 103%;
+    position: relative
+}
+
+@media(max-width:767px) {
+    .menswear__media {
+        padding-bottom: 165%
+    }
+}
+
+.menswear__media img,
+.menswear__media video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.menswear__top-wrapper {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 240px;
+    display: flex;
+    z-index: 4;
+    pointer-events: none
+}
+
+@media(max-width:991px) {
+    .menswear__top-wrapper {
+        bottom: 100px;
+        top: 27px
+    }
+}
+
+.menswear__top-wrapper>div {
+    width: 100%;
+    position: sticky;
+    top: 132px;
+    margin: 0 0 auto;
+    pointer-events: auto
+}
+
+.menswear__top-heading {
+    color: var(--text-white);
+    padding: 0;
+    margin: 0;
+    max-width: calc(100% - 130px)
+}
+
+@media(max-width:991px) {
+    .menswear__top-heading {
+        min-height: 90px
+    }
+}
+
+.menswear__bottom-wrapper {
+    position: absolute;
+    top: 120px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    pointer-events: none
+}
+
+@media(max-width:991px) {
+    .menswear__bottom-wrapper {
+        bottom: 56px
+    }
+}
+
+.menswear__bottom-heading {
+    margin: auto 0 0;
+    width: 100%;
+    color: var(--text-white);
+    font-size: var(--xxxl-text-font-size);
+    position: sticky;
+    bottom: -40px;
+    padding: 0 32px
+}
+
+@media(max-width:991px) {
+    .menswear__bottom-heading {
+        padding: 0 8px;
+        bottom: 45px
+    }
+}
+
+.menswear__bottom-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    z-index: 5;
+    padding: 0 32px
+}
+
+@media(max-width:991px) {
+    .menswear__bottom-button {
+        bottom: 16px;
+        padding: 0 8px
+    }
+}
+
+.menswear__bottom-button.menswear__bottom-button--right {
+    text-align: right
+}
+
+.menswear__bottom-button .button {
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    color: var(--text-white)
+}
+
+@media(max-width:991px) {
+    .menswear__bottom-button .button {
+        font-size: 12px
+    }
+}
+
+.menswear__bottom-button .button:hover {
+    color: var(--text-white)
+}
+
+.menswear__bottom-button .button:before {
+    background: var(--text-white)
+}

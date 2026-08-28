@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ search page */
+
+.search-page__form {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.search-page__input {
+  border: 0;
+  border-bottom: 1px solid var(--border-black);
+  background: transparent;
+  padding: 8px 0;
+  min-width: min(420px, 100%);
+  outline: none;
+}
+
+.search-page__count {
+  color: var(--text-grey);
+  margin: 0 0 40px;
+}
+
+.search-page__group {
+  margin-bottom: 72px;
+}
+
+.search-page__group > h2 {
+  margin: 0 0 24px;
+}
+
+.search-page__prompt {
+  padding-top: 16px;
+}
