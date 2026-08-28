@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 
 /*
@@ -32,8 +32,10 @@ import "@/styles/pages.css";
 import "@/sections/search/styles.css";
 import "@/sections/footer/styles.css";
 import "@/sections/checkout/styles.css";
+import "@/sections/chat/styles.css";
 
 import content from "@/data/content";
+import ChatWidget from "@/sections/chat/ChatWidget";
 import ThemeScripts from "@/components/ThemeScripts";
 
 const { meta } = content;
@@ -66,6 +68,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         {children}
+        {/* Sits outside the page chrome, as the original chat app did — the
+            mirror shows it was loaded on checkout as well as the storefront. */}
+        <ChatWidget />
         <ThemeScripts />
       </body>
     </html>
