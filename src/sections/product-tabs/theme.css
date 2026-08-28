@@ -1,0 +1,228 @@
+.product-tabs {
+    margin: 78px 0;
+    overflow: hidden;
+    position: relative
+}
+
+@media(max-width:991px) {
+    .product-tabs {
+        margin: 80px 0
+    }
+}
+
+.product-tabs .splide {
+    width: 78%
+}
+
+@media(max-width:991px) {
+    .product-tabs .splide {
+        width: auto;
+        visibility: visible;
+        overflow-x: scroll;
+        position: relative;
+        margin: 0 -8px;
+        padding: 0 2px 12px
+    }
+    .product-tabs .splide .splide__slide {
+        width: 45%;
+        min-width: 45%;
+        padding: 0 6px
+    }
+}
+
+@media(max-width:550px) {
+    .product-tabs .splide .splide__slide {
+        width: 75%;
+        min-width: 75%
+    }
+}
+
+.product-tabs .splide__track {
+    overflow: visible
+}
+
+.product-tabs__tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px
+}
+
+@media(max-width:767px) {
+    .product-tabs__tabs {
+        white-space: nowrap;
+        overflow-x: scroll;
+        padding-bottom: 10px;
+        margin-bottom: 12px
+    }
+}
+
+.product-tabs__tabs li {
+    margin-right: 32px
+}
+
+@media(max-width:767px) {
+    .product-tabs__tabs li {
+        margin-right: 20px
+    }
+    .product-tabs__tabs li:last-child {
+        margin-right: 0
+    }
+}
+
+.product-tabs__tabs li a {
+    opacity: .4;
+    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in
+}
+
+.product-tabs__tabs li a:hover,
+.product-tabs__tabs li a.active {
+    opacity: 1
+}
+
+.tabs {
+    position: relative
+}
+
+.tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in
+}
+
+.tab.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto
+}
+
+.tab__view-all-link {
+    position: absolute;
+    top: -46px;
+    right: 0
+}
+
+@media(max-width:991px) {
+    .tab__view-all-link {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: center;
+        margin-top: 20px
+    }
+}
+
+.product-tabs--design-type-2 {
+    margin: 48px 0
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 {
+        margin: 32px 0 20px
+    }
+}
+
+.product-tabs--design-type-2 .splide {
+    width: 100%
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 .splide {
+        width: auto
+    }
+}
+
+.product-tabs--design-type-2 .splide__track {
+    overflow: hidden
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 .splide__track {
+        overflow: visible
+    }
+}
+
+.product-tabs--design-type-2 .product-grid-item__image {
+    margin: 0
+}
+
+.product-tabs--design-type-2 .product-grid-item__content,
+.product-tabs--design-type-2 .product-grid-item__hover,
+.product-tabs--design-type-2 .product-grid-item__next,
+.product-tabs--design-type-2 .product-grid-item__previous {
+    display: none !important
+}
+
+.product-tabs--design-type-2 .product-tabs__tabs {
+    margin-bottom: 124px
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 .product-tabs__tabs {
+        margin-bottom: 83px
+    }
+}
+
+.product-tabs--design-type-2 .tab__view-all-link {
+    top: -148px
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 .tab__view-all-link {
+        right: 8px;
+        top: -50px;
+        margin: 0;
+        position: absolute
+    }
+}
+
+.product-tabs--design-type-2 .product-grid-item__image>a {
+    padding-bottom: 126%
+}
+
+@media(max-width:991px) {
+    .product-tabs--design-type-2 .splide .splide__slide {
+        width: 30%;
+        min-width: 30%
+    }
+}
+
+@media(max-width:550px) {
+    .product-tabs--design-type-2 .splide .splide__slide {
+        min-width: 45%;
+        width: 45%
+    }
+}
+
+@media(max-width:991px) {
+    .product-tabs__d-flex {
+        flex-wrap: wrap
+    }
+}
+
+.product-tabs__heading {
+    width: 24.3vw;
+    min-width: 24.3vw;
+    padding: 0 30px 0 0;
+    margin: 0
+}
+
+@media(max-width:991px) {
+    .product-tabs__heading {
+        width: 100%;
+        min-width: 100%;
+        padding: 0 0 32px
+    }
+}
+
+.product-tabs__content {
+    width: 100%
+}

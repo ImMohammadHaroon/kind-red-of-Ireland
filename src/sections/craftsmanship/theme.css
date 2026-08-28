@@ -1,0 +1,299 @@
+body.page-craft-template .craftsmanship {
+    margin: 90px 0 80px
+}
+
+@media(max-width:991px) {
+    body.page-craft-template .craftsmanship {
+        margin: 42px 0 56px
+    }
+}
+
+@media(max-width:991px) {
+    body.page-craft-template .craftsmanship__media {
+        order: 2;
+        margin-top: auto;
+        margin-bottom: 0
+    }
+}
+
+.craftsmanship {
+    margin: 140px 0;
+    position: relative;
+    overflow: hidden
+}
+
+@media(max-width:991px) {
+    .craftsmanship {
+        margin: 100px 0 0
+    }
+}
+
+.craftsmanship__d-flex {
+    min-width: 100%;
+    position: relative
+}
+
+.craftsmanship__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 100%
+}
+
+@media(max-width:991px) {
+    .craftsmanship__item {
+        flex-wrap: wrap;
+        align-items: normal
+    }
+}
+
+.craftsmanship__item+.craftsmanship__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in
+}
+
+.craftsmanship__item+.craftsmanship__item.active {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item {
+    z-index: 3
+}
+
+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item {
+    z-index: 4
+}
+
+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item {
+    z-index: 5
+}
+
+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item+.craftsmanship__item {
+    z-index: 6
+}
+
+.craftsmanship__media {
+    width: 50%;
+    min-width: 50%;
+    position: relative;
+    overflow: hidden
+}
+
+@media(max-width:991px) {
+    .craftsmanship__media {
+        width: 100%;
+        min-width: 100%;
+        order: -2;
+        margin-bottom: auto
+    }
+}
+
+.craftsmanship__media img,
+.craftsmanship__media video {
+    display: block;
+    width: 100%;
+    height: 61.8vw;
+    object-fit: cover
+}
+
+@media(max-width:991px) {
+    .craftsmanship__media img,
+    .craftsmanship__media video {
+        height: 123vw
+    }
+}
+
+.craftsmanship__content {
+    width: 50%;
+    min-width: 50%;
+    padding: 50px;
+    text-align: center
+}
+
+@media(max-width:991px) {
+    .craftsmanship__content {
+        width: 100%;
+        min-width: 100%;
+        padding: 65px 25px
+    }
+}
+
+@media(max-width:991px) {
+    .page-craft-template .craftsmanship__content {
+        padding-top: 120px;
+        padding-bottom: 120px
+    }
+}
+
+.craftsmanship__content-heading {
+    padding: 0 0 24px;
+    margin: 0
+}
+
+.craftsmanship__content-media {
+    width: 14.44vw;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    position: relative
+}
+
+@media(max-width:991px) {
+    .craftsmanship__content-media {
+        width: 47vw
+    }
+}
+
+.craftsmanship__content-media img,
+.craftsmanship__content-media video {
+    display: block;
+    width: 100%;
+    height: 19.44vw;
+    object-fit: cover
+}
+
+@media(max-width:991px) {
+    .craftsmanship__content-media img,
+    .craftsmanship__content-media video {
+        height: 66vw
+    }
+}
+
+.craftsmanship__content-description {
+    max-width: 25.4vw;
+    margin: 0 auto;
+    text-align: center;
+    font-family: freight-big-pro
+}
+
+@media(max-width:991px) {
+    .craftsmanship__content-description {
+        max-width: 70vw
+    }
+}
+
+.craftsmanship__content-description p {
+    padding: 20px 0 0;
+    margin: 0
+}
+
+.craftsmanship__content-description>*:first-child {
+    padding-top: 0;
+    margin-top: 0
+}
+
+.craftsmanship__content-button {
+    margin-top: 24px
+}
+
+.craftsmanship__thumbs {
+    position: absolute;
+    right: 27px;
+    bottom: 24px;
+    width: 67px;
+    padding: 4px;
+    background: #ffffffbf;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 4px
+}
+
+@media(max-width:991px) {
+    .craftsmanship__thumbs {
+        left: 8px;
+        bottom: 12px;
+        width: auto;
+        display: flex;
+        right: auto;
+        flex-wrap: nowrap
+    }
+}
+
+@media(max-width:991px) {
+    .craftsmanship__thumbs-list {
+        display: flex;
+        flex-wrap: nowrap
+    }
+}
+
+.craftsmanship__thumb {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0 4px;
+    outline: none;
+    width: 100%
+}
+
+@media(max-width:991px) {
+    .craftsmanship__thumb {
+        margin: 0 4px 0 0;
+        width: 40px;
+        min-width: 40px
+    }
+}
+
+.craftsmanship__thumb img,
+.craftsmanship__thumb video {
+    display: block;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    cursor: pointer
+}
+
+@media(max-width:991px) {
+    .craftsmanship__thumb img,
+    .craftsmanship__thumb video {
+        height: 54px
+    }
+}
+
+.craftsmanship__counter {
+    text-align: center;
+    padding: 15px 5px
+}
+
+@media(max-width:991px) {
+    .craftsmanship__counter {
+        padding: 20px 10px
+    }
+}
+
+@media(min-width:992px) {
+    .craftsmanship__content+.craftsmanship__media .craftsmanship__thumbs {
+        right: auto;
+        left: 27px
+    }
+}
+
+@media(min-width:992px) {
+    body.page-sustainability-template .craftsmanship__content+.craftsmanship__media .craftsmanship__thumbs,
+    body.page-craft-template .craftsmanship__content+.craftsmanship__media .craftsmanship__thumbs {
+        left: auto;
+        right: 27px
+    }
+}
+
+@media(max-width:991px) {
+    body.page-sustainability-template .craftsmanship__content {
+        order: -4;
+        padding-top: 16px
+    }
+}

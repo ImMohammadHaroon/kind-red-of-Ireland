@@ -1,0 +1,109 @@
+.bridal {
+    margin: 153px 0 138px
+}
+
+@media(max-width:991px) {
+    .bridal {
+        margin: 100px 0
+    }
+}
+
+.bridal__link {
+    display: block
+}
+
+.bridal__media {
+    flex-wrap: wrap;
+    margin-bottom: 27px
+}
+
+@media(max-width:767px) {
+    .bridal__media {
+        flex-wrap: nowrap;
+        overflow-x: scroll
+    }
+}
+
+.bridal-media__item {
+    width: 50%;
+    min-width: 50%
+}
+
+@media(max-width:767px) {
+    .bridal-media__item {
+        width: 90%;
+        min-width: 90%
+    }
+}
+
+.bridal-media__item p {
+    padding-bottom: 126.3%;
+    margin: 0;
+    position: relative;
+    overflow: hidden
+}
+
+.bridal-media__item p img,
+.bridal-media__item p video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+@media(max-width:767px) {
+    .bridal-text-block {
+        flex-wrap: wrap
+    }
+}
+
+.bridal-text-block__heading {
+    padding: 0 20px 0 0;
+    margin: 0
+}
+
+@media(max-width:767px) {
+    .bridal-text-block__heading {
+        padding: 0
+    }
+}
+
+.bridal-text-block__content {
+    margin: 0 0 0 auto;
+    padding: 18px 0 0;
+    width: 35vw
+}
+
+@media(max-width:991px) {
+    .bridal-text-block__content {
+        width: 45vw
+    }
+}
+
+@media(max-width:767px) {
+    .bridal-text-block__content {
+        width: 100%
+    }
+}
+
+.bridal-text-block__description {
+    font-size: var(--body-font-size)
+}
+
+.bridal-text-block__description p {
+    padding: 20px 0 0;
+    margin: 0
+}
+
+.bridal-text-block__description>*:first-child {
+    padding-top: 0
+}
+
+.bridal-text-block__button {
+    margin-top: 14px
+}
