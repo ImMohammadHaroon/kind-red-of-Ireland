@@ -1,0 +1,202 @@
+/* ------------------------------------------------------------- chat widget
+ *
+ * Replaces the Gorgias Live Chat widget. Bottom right, sitting above page
+ * content but below the cart drawer and search overlay, which are z-index 99 and
+ * are meant to cover it.
+ */
+
+.chat-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.chat-launcher {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--background-green);
+  color: var(--text-white);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 18%);
+  transition: transform 0.25s ease-in, background 0.25s ease-in;
+}
+
+.chat-launcher:hover {
+  transform: translateY(-2px);
+}
+
+.chat-launcher svg path {
+  stroke: currentColor;
+}
+
+.chat-launcher__dot {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--background-pink);
+  border: 1.5px solid var(--background-green);
+}
+
+.chat-panel {
+  width: min(360px, calc(100vw - 48px));
+  background: var(--background-white);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 14%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* Kept in the DOM so the transition can run; inert while closed. */
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in, transform 0.25s ease-in, visibility 0.25s;
+}
+
+.chat-widget--open .chat-panel {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.chat-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  background: var(--background-green);
+  color: var(--text-white);
+}
+
+.chat-panel__title {
+  margin: 0;
+  color: var(--text-white);
+}
+
+.chat-panel__status {
+  color: rgb(255 255 255 / 65%);
+  margin-top: 2px;
+}
+
+.chat-panel__close {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 0;
+}
+
+.chat-panel__close svg path {
+  fill: #fff;
+}
+
+.chat-panel__log {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--background-light);
+}
+
+.chat-message p {
+  margin: 0;
+  padding: 11px 14px;
+  max-width: 85%;
+}
+
+.chat-message--agent p {
+  background: var(--background-white);
+  border: 1px solid var(--border-light);
+}
+
+.chat-message--visitor {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-message--visitor p {
+  background: var(--background-green);
+  color: var(--text-white);
+}
+
+.chat-panel__quick {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 14px 20px 0;
+}
+
+.chat-quick {
+  border: 1px solid var(--border-light);
+  padding: 7px 12px;
+  color: var(--text-black);
+  text-decoration: none;
+  transition: border-color 0.2s ease-in;
+}
+
+.chat-quick:hover {
+  border-color: var(--border-black);
+}
+
+.chat-panel__form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 18px;
+}
+
+.chat-panel__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-light);
+  background: transparent;
+  padding: 9px 0;
+  font-family: inherit;
+  font-size: var(--medium-text-font-size);
+  outline: none;
+}
+
+.chat-panel__input:focus {
+  border-bottom-color: var(--border-black);
+}
+
+.chat-panel__send {
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-black);
+  line-height: 0;
+  padding: 6px;
+}
+
+.chat-panel__send:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 575px) {
+  .chat-widget {
+    right: 16px;
+    bottom: 16px;
+  }
+}
