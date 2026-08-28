@@ -5,16 +5,16 @@ import "./globals.css";
 import "@/styles/theme/fonts.css";
 import "@/styles/theme/variables.css";
 import "@/styles/theme/theme.scss.css";
-import "@/sections/header/theme.css";
-import "@/sections/search/theme.css";
-import "@/sections/footer/theme.css";
+import "./header/theme.css";
+import "./search/theme.css";
+import "./footer/theme.css";
 import "@/styles/pages.css";
-import "@/sections/search/styles.css";
-import "@/sections/footer/styles.css";
+import "./search/styles.css";
+import "./footer/styles.css";
 
 import content from "@/data/content";
-import Header from "@/sections/header/Header";
-import Footer from "@/sections/footer/Footer";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 import ThemeScripts from "@/components/ThemeScripts";
 
 const geistSans = Geist({
